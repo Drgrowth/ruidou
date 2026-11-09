@@ -1,151 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Rui Dou | Mathematics</title>
+    <title>Rui Dou | Mathematics</title>
 
-<!-- MathJax: display mathematical formulas -->
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']],
-    displayMath: [['$$', '$$'], ['\\[', '\\]']]
-  }
-};
-</script>
-<script defer
-src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
+    <meta name="description"
+          content="Academic homepage of Rui Dou, Postdoctoral Researcher at the School of Mathematics and Statistics, Chongqing University. Research interests include operator theory, operator algebras, and Toeplitz operators.">
 
-<style>
-* {
-    box-sizing: border-box;
-}
+    <!-- MathJax -->
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    };
+    </script>
 
-body {
-    margin: 0;
-    background: #ffffff;
-    color: #333333;
-    font-family: Georgia, "Times New Roman", serif;
-    line-height: 1.75;
-}
+    <script defer
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 
-header {
-    background: #183153;
-    color: white;
-    padding: 35px 20px;
-    text-align: center;
-}
+    <style>
+    * {
+        box-sizing: border-box;
+    }
 
-header h1 {
-    margin: 0;
-    font-size: 32px;
-    font-weight: normal;
-}
+    html {
+        scroll-behavior: smooth;
+    }
 
-header p {
-    margin: 8px 0 0;
-    color: #dce6f1;
-}
+    body {
+        margin: 0;
+        background: #ffffff;
+        color: #333333;
+        font-family: Georgia, "Times New Roman", serif;
+        line-height: 1.75;
+    }
 
-nav {
-    background: #f4f6f8;
-    text-align: center;
-    padding: 13px;
-    border-bottom: 1px solid #dddddd;
-}
+    /* Header */
 
-nav a {
-    color: #183153;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 15px;
-}
+    header {
+        background: #183153;
+        color: white;
+        padding: 38px 20px;
+        text-align: center;
+    }
 
-nav a:hover {
-    text-decoration: underline;
-}
+    header h1 {
+        margin: 0;
+        font-size: 34px;
+        font-weight: normal;
+        letter-spacing: 0.5px;
+    }
 
-.container {
-    max-width: 1050px;
-    margin: 40px auto;
-    padding: 0 25px;
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    gap: 45px;
-}
+    header p {
+        margin: 10px 0 0;
+        color: #dce6f1;
+        font-size: 15px;
+    }
 
-.profile {
-    text-align: center;
-}
+    /* Navigation */
 
-.profile img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.profile h2 {
-    font-size: 23px;
-    margin-bottom: 5px;
-}
-
-.profile p {
-    font-size: 14px;
-    color: #555555;
-}
-
-main h2 {
-    color: #183153;
-    font-size: 23px;
-    font-weight: normal;
-    border-bottom: 1px solid #d9dfe7;
-    padding-bottom: 6px;
-    margin-top: 30px;
-}
-
-main h2:first-child {
-    margin-top: 0;
-}
-
-a {
-    color: #245b91;
-}
-
-.paper {
-    margin-bottom: 17px;
-}
-
-footer {
-    text-align: center;
-    padding: 25px;
-    margin-top: 50px;
-    background: #f4f6f8;
-    color: #777777;
-    font-size: 13px;
-}
-
-@media (max-width: 700px) {
-    .container {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    nav {
+        background: #f4f6f8;
+        text-align: center;
+        padding: 13px 10px;
+        border-bottom: 1px solid #dddddd;
     }
 
     nav a {
-        margin: 0 7px;
+        display: inline-block;
+        color: #183153;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 15px;
     }
-}
-</style>
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    /* Main layout */
+
+    .container {
+        max-width: 1080px;
+        margin: 45px auto;
+        padding: 0 25px;
+        display: grid;
+        grid-template-columns: 250px minmax(0, 1fr);
+        gap: 50px;
+        align-items: start;
+    }
+
+    /* Profile */
+
+    .profile {
+        text-align: center;
+    }
+
+    .profile img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 5px;
+        border: 1px solid #eeeeee;
+    }
+
+    .profile h2 {
+        font-size: 23px;
+        font-weight: normal;
+        margin: 12px 0 5px;
+    }
+
+    .profile p {
+        font-size: 14px;
+        color: #555555;
+        line-height: 1.8;
+    }
+
+    /* Main content */
+
+    main {
+        min-width: 0;
+    }
+
+    main section {
+        margin-bottom: 32px;
+        scroll-margin-top: 20px;
+    }
+
+    main h2 {
+        color: #183153;
+        font-size: 23px;
+        font-weight: normal;
+        border-bottom: 1px solid #d9dfe7;
+        padding-bottom: 6px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    main section:first-child h2 {
+        margin-top: 0;
+    }
+
+    a {
+        color: #245b91;
+    }
+
+    a:hover {
+        color: #183153;
+    }
+
+    ul {
+        padding-left: 25px;
+    }
+
+    li {
+        margin-bottom: 5px;
+    }
+
+    /* Publications and courses */
+
+    .paper,
+    .course {
+        margin-bottom: 18px;
+    }
+
+    .paper p,
+    .course p {
+        margin: 0;
+    }
+
+    /* Footer */
+
+    footer {
+        text-align: center;
+        padding: 25px;
+        margin-top: 50px;
+        background: #f4f6f8;
+        color: #777777;
+        font-size: 13px;
+    }
+
+    /* Responsive design */
+
+    @media (max-width: 700px) {
+
+        header {
+            padding: 28px 15px;
+        }
+
+        header h1 {
+            font-size: 29px;
+        }
+
+        header p {
+            font-size: 13px;
+        }
+
+        nav {
+            padding: 10px 5px;
+        }
+
+        nav a {
+            margin: 5px 8px;
+            font-size: 14px;
+        }
+
+        .container {
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .profile {
+            margin-bottom: 10px;
+        }
+
+        main h2 {
+            font-size: 21px;
+        }
+    }
+    </style>
 </head>
 
 <body>
 
 <header>
     <h1>Rui Dou</h1>
-    <p>Mathematics | Operator Theory and Operator Algebras | Noncommutative Approximation of Hilbert Space Operators</p>
+    <p>
+        Mathematics |
+        Operator Theory and Operator Algebras |
+        Noncommutative Approximation of Hilbert Space Operators
+    </p>
 </header>
 
 <nav>
@@ -158,163 +252,312 @@ footer {
 
 <div class="container">
 
+    <!-- Left sidebar -->
+
     <aside class="profile">
 
-        <!-- Replace photo.jpg with your own photograph -->
-        <img src="photo.jpg" alt="Rui Dou">
+        <img src="photo.jpg"
+             alt="Rui Dou"
+             loading="lazy">
 
         <h2>Rui Dou</h2>
 
         <p>
-        Postdoctoral Researcher<br>
-        School of Mathematics and Statistics<br>
-        Chongqing University
+            Postdoctoral Researcher<br>
+            School of Mathematics and Statistics<br>
+            Chongqing University
         </p>
 
-        <!--<p>
-        <a href="cv.pdf">Curriculum Vitae</a>
-        </p>-->
+        <!-- Curriculum Vitae -->
+        <!--
+        <p>
+            <a href="cv.pdf">Curriculum Vitae</a>
+        </p>
+        -->
 
         <p>
-        <a href="https://scholar.google.com/">
-        Google Scholar
-        </a>
+            <a href="https://scholar.google.com/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Google Scholar
+            </a>
         </p>
 
     </aside>
 
+
+    <!-- Main content -->
+
     <main>
 
+        <!-- About -->
+
         <section id="about">
+
             <h2>About Me</h2>
 
             <p>
-            I am a postdoctoral researcher at the
-            School of Mathematics and Statistics,
-            Chongqing University.
+                I am a postdoctoral researcher at the
+                School of Mathematics and Statistics,
+                Chongqing University.
             </p>
 
-            <!-- <p>
-            I received my Ph.D. in Mathematics from
-            Jilin University in 2026.
-            </p> -->
+            <!--
+            <p>
+                I received my Ph.D. in Mathematics from
+                Jilin University in 2026.
+            </p>
+            -->
+
         </section>
 
+
+        <!-- Research -->
+
         <section id="research">
+
             <h2>Research Interests</h2>
 
             <ul>
                 <li>Operator Theory and Operator Algebras</li>
-                <li>Noncommutative approximation of Hilbert Space Operators</li>
-                <li>Classification and Reducing Subspaces of Operators (including Toeplitz Operators)</li>
-                <!-- <li></li> -->
+
+                <li>
+                    Noncommutative Approximation of
+                    Hilbert Space Operators
+                </li>
+
+                <li>
+                    Classification and Reducing Subspaces
+                    of Operators, particularly Toeplitz Operators
+                </li>
             </ul>
 
             <p>
-            Recently, my research focuses particularly on
-            the reducing structures and classification
-            of Toeplitz operators with non-analytic symbols
-            on the classical Hardy space $H^2(\mathbb D)$.
+                Recently, my research has focused particularly on
+                the reducing structures and classification of
+                Toeplitz operators with non-analytic symbols
+                on the classical Hardy space $H^2(\mathbb D)$.
             </p>
+
         </section>
 
+
+        <!-- Publications -->
+
         <section id="publications">
+
             <h2>Publications and Preprints</h2>
 
             <div class="paper">
+
                 <p>
-                <strong>1. Maximal numerical ranges of certain classes of operators and approximation. </strong><br>
-                Rui Dou, Youqing Ji, Sen Zhu.<br>
-                <em>Banach Journal of Mathematical Analysis </em>, 2024.<br>
-                [<a href="papers/paper2024.pdf">Download PDF</a>]
-                [<a href="https://doi.org/10.1007/s43037-024-00358-6">DOI</a>]
+                    <strong>
+                        1. Maximal numerical ranges of certain
+                        classes of operators and approximation.
+                    </strong>
+                    <br>
+
+                    Rui Dou, Youqing Ji, Sen Zhu.
+                    <br>
+
+                    <em>
+                        Banach Journal of Mathematical Analysis
+                    </em>, 2024.
+                    <br>
+
+                    [
+                    <a href="papers/paper2024.pdf">
+                        Download PDF
+                    </a>
+                    ]
+                    [
+                    <a href="https://doi.org/10.1007/s43037-024-00358-6"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        DOI
+                    </a>
+                    ]
                 </p>
+
             </div>
+
 
             <div class="paper">
+
                 <p>
-                <strong>2. Commutators of Complex Symmetric Operators. </strong><br>
-                Rui Dou, Xiaolong Ruan, Sen Zhu.<br>
-                <em>Communications in Mathematical Research</em>, 2025.<br>
-                [<a href="papers/paper2025.pdf">Download PDF</a>]
-                [<a href="https://doi.org/10.4208/cmr.2024-0053">DOI</a>]
+                    <strong>
+                        2. Commutators of Complex Symmetric Operators.
+                    </strong>
+                    <br>
+
+                    Rui Dou, Xiaolong Ruan, Sen Zhu.
+                    <br>
+
+                    <em>
+                        Communications in Mathematical Research
+                    </em>, 2025.
+                    <br>
+
+                    [
+                    <a href="papers/paper2025.pdf">
+                        Download PDF
+                    </a>
+                    ]
+                    [
+                    <a href="https://doi.org/10.4208/cmr.2024-0053"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        DOI
+                    </a>
+                    ]
                 </p>
+
             </div>
+
 
             <div class="paper">
+
                 <p>
-                <strong>3. Unitary equivalence and reducing subspaces of trigonometric Toeplitz operators</strong><br>
-                Rui Dou, Dechao Zheng, Sen Zhu.<br>
-                Preprint ( had wirtten before May 2025).
+                    <strong>
+                        3. Unitary equivalence and reducing subspaces
+                        of trigonometric Toeplitz operators.
+                    </strong>
+                    <br>
+
+                    Rui Dou, Dechao Zheng, Sen Zhu.
+                    <br>
+
+                    Preprint, 2025.
                 </p>
+
             </div>
+
 
             <div class="paper">
+
                 <p>
-                <strong>4. Complete non-normality of trigonometric Toeplitz operators. </strong><br>
-                Rui Dou, Dechao Zheng, Sen Zhu.<br>
-                Preprint ( had wirtten before September 2025).
+                    <strong>
+                        4. Complete non-normality of
+                        trigonometric Toeplitz operators.
+                    </strong>
+                    <br>
+
+                    Rui Dou, Dechao Zheng, Sen Zhu.
+                    <br>
+
+                    Preprint, 2025.
                 </p>
+
             </div>
 
-            <!-- <div class="paper">
+            <!--
+            <div class="paper">
+
                 <p>
-                <strong>5. Algebraic Opproaches to Biquasitriangular Toeplitz operators. </strong><br>
-                Rui Dou, Sen Zhu.<br>
-                Preprint ( had wirtten before September 2026).
+                    <strong>
+                        5. Algebraic Approaches to
+                        Biquasitriangular Toeplitz Operators.
+                    </strong>
+                    <br>
+
+                    Rui Dou, Sen Zhu.
+                    <br>
+
+                    Preprint, 2026.
                 </p>
-            </div> -->
+
+            </div>
+            -->
+
         </section>
+
+
+        <!-- Teaching -->
 
         <section id="teaching">
+
             <h2>Teaching</h2>
 
-            <div class="Course">
-            <p>
-                <strong>1. Mathematical Analysis Problem Session (202609-, In Chongqing Univ.). </strong><br>
-                [<a href="course/MA2026.pdf">Download PDF</a>]
-                <!-- [<a href="https://doi.org/10.1007/s43037-024-00358-6">DOI</a>] -->
+            <div class="course">
+
+                <p>
+                    <strong>
+                        1. Mathematical Analysis Problem Session
+                        (September 2026–, Chongqing University).
+                    </strong>
+                    <br>
+
+                    [
+                    <a href="course/MA2026.pdf">
+                        Download PDF
+                    </a>
+                    ]
                 </p>
+
             </div>
 
-            <div class="Course">
-            <p>
-                <strong>2. Functional Analysis Problem Session (202409-202501, In Jilin Univ.) </strong><br>
-                [<a href="course/FA2024.pdf">Download PDF</a>]
-                <!-- [<a href="https://doi.org/10.1007/s43037-024-00358-6">DOI</a>] -->
+
+            <div class="course">
+
+                <p>
+                    <strong>
+                        2. Functional Analysis Problem Session
+                        (September 2024–January 2025, Jilin University).
+                    </strong>
+                    <br>
+
+                    [
+                    <a href="course/FA2024.pdf">
+                        Download PDF
+                    </a>
+                    ]
                 </p>
+
             </div>
 
-            <div class="Course">
-            <p>
-                <strong>3. Complex Analysis Problem Session (202309-202401, In Jilin Univ.) </strong><br>
-                [<a href="course/CA2023.pdf">Download PDF</a>]
-                <!-- [<a href="https://doi.org/10.1007/s43037-024-00358-6">DOI</a>] -->
+
+            <div class="course">
+
+                <p>
+                    <strong>
+                        3. Complex Analysis Problem Session
+                        (September 2023–January 2024, Jilin University).
+                    </strong>
+                    <br>
+
+                    [
+                    <a href="course/CA2023.pdf">
+                        Download PDF
+                    </a>
+                    ]
                 </p>
+
             </div>
-          
-            <!-- <ul>
-                <li>Mathematical Analysis Problem Session (202609-, In Chongqing Univ.)</li>
-           </ul>
-                <li>Functional Analysis Problem Session (202409-202501, In Jilin Univ.)</li>
-            </ul>
-                <li>Complex Analysis Problem Session (202309-202401, In Jilin Univ.)</li> -->
 
         </section>
 
+
+        <!-- Contact -->
+
         <section id="contact">
+
             <h2>Contact</h2>
 
             <p>
-            School of Mathematics and Statistics<br>
-            Chongqing University<br>
-            Email: dourui@cqu.edu.cn
+                School of Mathematics and Statistics<br>
+                Chongqing University<br>
+                Email:
+                <a href="mailto:dourui@cqu.edu.cn">
+                    dourui@cqu.edu.cn
+                </a>
             </p>
+
         </section>
 
     </main>
 
 </div>
+
 
 <footer>
     © 2026 Rui Dou. All Rights Reserved.
